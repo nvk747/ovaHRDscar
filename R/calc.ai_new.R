@@ -101,6 +101,7 @@ calc.ai_new<-function(seg, chrominfo, min.size=1e6, cont = 0,ploidyByChromosome=
     no.events[j,10] <- nrow(sample.seg[sample.seg[,'AI'] == 3,])
   }
   result <- list(no.events, seg)
+  print(head(seg))
   return(no.events)
   #return(result)
 }

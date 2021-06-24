@@ -3,7 +3,8 @@
 #' @param seg segmentation data
 
 ######### Function to extract the number of LOH events of a particular size ########
-#Start allways MbSizes with 0
+# Start allways MbSizes with 0
+# column number for nA and nB
 #As output will give default output will give you the LOH events of sizes 0 to 1MB, 1Mb to 4Mb, 7Mb to 10Mb, and so on... according to the windows sizes selected
 features.LOH <- function(segs,  MbSizes = c(0,1,4,7,10,13,16,19,22,25,28,31,34,37,40), A_cn=7, B_cn=8){
     #For each of  the samples
@@ -26,5 +27,6 @@ features.LOH <- function(segs,  MbSizes = c(0,1,4,7,10,13,16,19,22,25,28,31,34,3
     colnames(totalCountLOHs) <- c(paste("LoH", paste(MbSizes, "Mb", sep="" ), sep="_"))
     #colnames(totalCountLOHs) <- c(paste(MbSizes, "Mb", sep="" ))
     totalCountLOHs <- as.data.frame(totalCountLOHs)
+    print(head(segs))
     return(totalCountLOHs)
 }

@@ -23,7 +23,6 @@ preprocess.hrd<-function(seg){
 
 }
 
-
 #Preparing input
 preparing.input <- function(seg){
   segAUX <- seg
@@ -34,7 +33,6 @@ preparing.input <- function(seg){
   segAUX[,7] <- seg[,6]
   colnames(segAUX)[7] <- colnames(seg)[6]
   #segAUX[,10] <- rep(1,dim(seg)[1])
-
   preprocessed_seg <- preprocess.hrd(segAUX)
   preprocessed_seg <- rm.chr.normals(preprocessed_seg)
   length_breaks <- preprocessed_seg[,4] - preprocessed_seg[,3]

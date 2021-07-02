@@ -27,6 +27,5 @@ features.LOH <- function(segs,  MbSizes = c(0,1,4,7,10,13,16,19,22,25,28,31,34,3
     colnames(totalCountLOHs) <- c(paste("LoH", paste(MbSizes, "Mb", sep="" ), sep="_"))
     #colnames(totalCountLOHs) <- c(paste(MbSizes, "Mb", sep="" ))
     totalCountLOHs <- as.data.frame(totalCountLOHs)
-    print(head(segs))
     return(totalCountLOHs)
 }

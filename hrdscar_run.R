@@ -34,7 +34,7 @@ source("/home/vijay/my_projects/ovaHRDscar/R/rm.chr.deletions.R")
 source("/home/vijay/my_projects/ovaHRDscar/R/shrink.seg.ai.R")
 source("/home/vijay/my_projects/ovaHRDscar/R/shrink.seg.ai.wrapper.R")
 
-seg <- as.data.frame(read.table("/home/vijay/my_projects/HRD_pipeline/hrd_ascat_results/log_baf_files/segments_mod2.txt",header = T))
+seg <- as.data.frame(read.table("/home/vijay/my_projects/HRD_pipeline/hrd_ascat_results/GSE118527/GSE118527_tumor_only/GSE118527_tumor_only_segments2.txt",header = T))
 test <- get.ovaHRDscars(seg,chrominfo = "grch37")
 test
-#write.table(text,"./test.txt",sep = '\t',col.names = T, quote = F)
+write.table(test,"/home/vijay/my_projects/HRD_pipeline/hrd_ascat_results/GSE118527/GSE118527_tumor_only/GSE118527_HRDscores.txt",sep = '\t',col.names = T, quote = F)
